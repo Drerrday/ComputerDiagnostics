@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en" style="background-color:Black;">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head >
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mouse Tester (Right Click &amp; Left Click Tester)</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="canonical" href="mouse-click-tester.html" />
+<body style="background-color:Black;"> 
+<header style="background-color:Black;">
+  <nav class="navbar navbar-default active">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html" title="">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a style="color:white;" href="keyboard.html" title="Keyboard Tester">Keyboard Tester</a></li>
+          <li><a style="color:white;" href="mouse.html" title="Mouse Tester" class="menu-active">Mouse Tester</a></li>
+        </ul>
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container sect-tester">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+         <h1 style="color:white;" class="text-center">Mouse Tester</h1>
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-container key-sect">
+    <div class="container cont-tester">
+      <div class="row">
+        <div class="col-xs-12">
+
+        <audio id="audio" controls style="display:none">
+  <source src="mouse.wav" type="audio/mpeg"> Your browser does not support the audio element.
+</audio>
+
+<div class="keyboard-container">
+  <div id="resetbutton">
+    <form action="#" method="post">
+      <input type="reset" name="reset" value="Reset">
+      <label>
+        <div id="soundArea">
+          <input id="chk" type="checkbox" name="click" value="click" checked="checked">Click Sound<br>
+        </div>
+      </label>
+    </form>
+  </div>
+
+  <table id="mouse-tester">
+  <tr>
+    <td class="mouse-1">Left Click</td>
+    <td class="mouse-2"></td>
+    <td class="mouse-3">Right Click</td>
+  </tr>
+
+  </table>
+
+</div>
+
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src='global.js'></script>
+<script>document.addEventListener("DOMContentLoaded", function (event) {navActivePage();scrollRevelation('.reveal');});</script>
+<script src='tester.js'></script><script src='tester2.js'></script><script>$(document).mousedown(function(event) {var isChecked = document.getElementById('chk').checked;if (isChecked) {document.getElementById('audio').play();}switch (event.which) {case 1:$('.mouse-1').addClass('clicked');break;case 2:$('.mouse-2').addClass('clicked');break;case 3:$('.mouse-3').addClass('clicked');break;default:alert('You have a strange Mouse!');}});</script><script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?t52.6;r"+escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";h"+escape(document.title.substring(0,150))+";"+Math.random();</script></body>
+
+</html>
